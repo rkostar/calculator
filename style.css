@@ -20,10 +20,12 @@
 .inner-container>div{
     background-color: black;
     color: purple;
-    text-align: center;
     padding: 10%;
     font-size:30px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .inner-container .num{
     color: white;
@@ -35,7 +37,7 @@
 }
 @media screen and (min-width:224px){
     .inner-container{
-        min-height: 100vh;
+        min-height: 80vh;
         /* height: 100%; */
     }
 }
