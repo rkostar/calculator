@@ -1,7 +1,9 @@
 var space = document.getElementById('display');
 
 var buttons = Array.from(document.getElementsByClassName('buttons'));
-console.log(buttons);
+let stack = [];
+const push = (item) => stack.push(item);
+const pop = () => stack.pop();
 
 buttons.map(button => {
     button.addEventListener('click', (e) => {
@@ -16,9 +18,14 @@ buttons.map(button => {
             case '=':
                 try {
                     space.innerText = eval(space.innerText);
+                    stack.push(space.innerText);
                 } catch {
                     space.innerText = 'ERROR';
                 }
+                break;
+            case 'undo':
+                space.innerText='';
+                space.innerText+= stack.pop();
                 break;
             default:
                 space.innerText += e.target.innerText;

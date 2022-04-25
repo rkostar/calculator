@@ -1,5 +1,6 @@
+
 .container{
-    width: 90%;
+    width: 100%;
     margin: auto;
     box-shadow: 15px 10px 20px 10px grey ;
 }
@@ -31,4 +32,10 @@
     background-color: purple;
     color: white;
     cursor: pointer;
+}
+@media screen and (min-width:224px){
+    .inner-container{
+        min-height: 100vh;
+        /* height: 100%; */
+    }
 }
